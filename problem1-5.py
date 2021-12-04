@@ -49,14 +49,15 @@ def problem4(n):
     start_num -= 1
 
 def problem5(n):
-  num = 0
+  num = n
+  numbers = range(int(n // 2, n))
   while True:
-    for x in range(n):
+    for x in numbers:
       if num % x != 0:
         break
     else:
       return num
-    num += 1
+    num += n
 
 
 if __name__ == "__main__":
@@ -64,5 +65,5 @@ if __name__ == "__main__":
   print(problem2(4000000))
   print(problem3(600851475143))
   print(problem4(3))
-  print(problem5(10))
+  print(problem5(20))
   
