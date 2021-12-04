@@ -58,7 +58,9 @@ def problem5(n):
     else:
       return num
     num += n
-
+    
+def problem6(n):
+  return sum(range(n + 1)) ** 2 - sum(x ** 2 for x in range(n + 1))
 
 if __name__ == "__main__":
   print(problem1(1000))
