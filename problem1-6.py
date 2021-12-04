@@ -62,6 +62,20 @@ def problem5(n):
 def problem6(n):
   return sum(range(n + 1)) ** 2 - sum(x ** 2 for x in range(n + 1))
 
+def problem7(n):
+    limitn = 10000000+1
+    not_prime = [False] * limitn
+    primes = 0
+    for i in range(2, limitn):
+        if not_prime[i]:
+            continue
+        for f in range(i*2, limitn, i):
+            not_prime[f] = True
+        
+        primes += 1
+        if primes == n:
+          return i
+
 if __name__ == "__main__":
   print(problem1(1000))
   print(problem2(4000000))
