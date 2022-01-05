@@ -75,6 +75,22 @@ def problem7(n):
         primes += 1
         if primes == n:
           return i
+        
+def problem8(string, n):
+  total = 0
+  for i in range(len(string) - n):
+    current = 1
+    for j in range(n):
+      current *= int(string[i + j])
+    if current > total:
+      total = current
+  return total
+
+def problem9(n):
+  for x in range(0, n // 2):
+    for y in range(0, n // 2):
+      if (x ** 2 + y ** 2) ** 0.5 + x + y == n:
+        return (x ** 2 + y ** 2) ** 0.5 * x * y
 
 if __name__ == "__main__":
   print(problem1(1000))
@@ -82,4 +98,6 @@ if __name__ == "__main__":
   print(problem3(600851475143))
   print(problem4(3))
   print(problem5(20))
+  print(probelm
+  
   
